@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context=".BenefitInfo" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/shield_land" >
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white_transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/preferred_provider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:background="@color/base_color_blue"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/preferred_provider"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/prefered_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:gravity="fill_horizontal"
+                android:paddingLeft="5dp"
+                android:text="@string/dummy_content"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/non_preferred_provider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@color/base_color_green"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/non_preferred_provider"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/non_prefered_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|center_horizontal|fill_horizontal|center"
+                android:paddingLeft="5dp"
+                android:text="@string/dummy_content"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/additional_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@color/base_color_blue"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/additional_information"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/additional_information_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="fill_horizontal"
+                android:paddingLeft="5dp"
+                android:text="@string/dummy_lorem_ipsum_long"
+                android:textColor="#000" />
+
+            <!-- android:alpha="0.8" -->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

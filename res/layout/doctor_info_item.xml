@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_doctors_list_item_back"
+    android:orientation="vertical"
+    android:paddingBottom="3dp" >
+
+    <ImageView
+        android:id="@+id/doc_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/doc_image"
+        android:src="@drawable/doctor_image" />
+    
+    <TextView
+        android:id="@+id/doc_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/doc_image"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/doc_image"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/dummy_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/base_color_blue"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/doc_speciality"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doc_name"
+        android:layout_below="@+id/doc_name"
+        android:layout_marginBottom="2dp"
+        android:gravity="center_horizontal|center"
+        android:text="@string/dummy_specialities"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/base_color_green" />
+
+    <TextView
+        android:id="@+id/doc_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doc_cost"
+        android:layout_toRightOf="@+id/doc_image"
+        android:text="@string/doc_distance"
+        android:textAppearance="?android:attr/textAppearanceSmallInverse"
+        android:textColor="@color/base_color_blue_light" />
+
+    <TextView
+        android:id="@+id/doc_distance_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/doc_distance"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/doc_distance"
+        android:text="@string/dummy_distance"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/base_color_green" />
+
+     <TextView
+         android:id="@+id/doc_cost"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/doc_distance"
+         android:layout_below="@+id/doc_speciality"
+         android:text="@string/doc_cost"
+         android:textAppearance="?android:attr/textAppearanceSmallInverse"
+         android:textColor="@color/base_color_blue_light" />
+
+     <TextView
+         android:id="@+id/doc_cost_val"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/doc_cost"
+         android:layout_alignBottom="@+id/doc_cost"
+         android:layout_alignLeft="@+id/doc_distance_val"
+         android:text="@string/dummy_cost"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:textColor="@color/base_color_green" />
+
+</RelativeLayout>

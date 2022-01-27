@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_services_list_item_back"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp" >
+
+    <TextView
+        android:id="@+id/searchResultCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="3dp"
+        android:ellipsize="marquee"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/category_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/base_color_blue" />
+
+    <TextView
+        android:id="@+id/searchResuluSubcategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="@string/category_label"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/base_color_blue" />
+
+</LinearLayout>

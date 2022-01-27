@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flipper_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/base_color_blue"
+        android:orientation="vertical"
+        android:padding="2dp" >
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_launcher"
+            android:contentDescription="@string/home" />
+
+        <ImageButton
+            android:id="@+id/distanceSortButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/base_color_blue"
+            android:contentDescription="@string/distance_sort"
+            android:scaleType="center"
+            android:src="@drawable/ic_menu_distance" />
+
+        <ImageButton
+            android:id="@+id/costSortButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/base_color_blue"
+            android:contentDescription="@string/cost_sort"
+            android:scaleType="center"
+            android:src="@drawable/ic_menu_cost" />
+
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/base_color_blue"
+            android:contentDescription="@string/filter"
+            android:scaleType="center"
+            android:src="@drawable/ic_menu_filter" />
+
+        <ImageButton
+            android:id="@+id/listButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/base_color_blue"
+            android:contentDescription="@string/list"
+            android:scaleType="center"
+            android:src="@drawable/ic_menu_list" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/flipperText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_img_item_back"
+            android:ellipsize="none"
+            android:paddingLeft="5dp"
+            android:text="@string/empty"
+            android:textColor="@color/base_color_blue" />
+
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/flipper_map"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <com.google.android.maps.MapView
+                    android:id="@+id/map_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:apiKey="0xL5Ul7LhEk52vAj657P4H0RwjpplvliiHg9nEg"
+                    android:clickable="true"
+                    android:drawingCacheQuality="high"
+                    android:enabled="true" />
+
+                <ImageButton
+                    android:id="@+id/myLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white_transparent"
+                    android:contentDescription="@string/empty"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_menu_mylocation" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_doctors"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/doctors_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ListView>
+            </RelativeLayout>
+        </ViewFlipper>
+    </LinearLayout>
+
+</LinearLayout>

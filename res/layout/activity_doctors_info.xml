@@ -1,0 +1,338 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".DoctorsInfoActivity" >
+
+        <TextView
+            android:id="@+id/doc_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="2dp"
+            android:background="@color/base_color_green"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/dummy_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/doc_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/doc_image"
+                android:src="@drawable/doctor_image_big" />
+
+            <TextView
+                android:id="@+id/doc_speciality_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/doc_image"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/doc_image"
+                android:text="@string/dummy_specialities"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green_dark" />
+
+            <TextView
+                android:id="@+id/doc_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/doc_speciality_main"
+                android:layout_below="@+id/doc_speciality_main"
+                android:text="@string/dummy_address"
+           
+                android:textColor="@color/base_color_green" />
+            
+            <TextView
+                android:id="@+id/doc_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/doc_distance"
+                android:layout_alignRight="@+id/doc_distance"
+                android:text="@string/doc_cost"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/base_color_blue_light" />
+
+            <TextView
+                android:id="@+id/doc_cost_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/doc_cost"
+                android:layout_alignBottom="@+id/doc_cost"
+                android:layout_alignLeft="@+id/doc_distance_val"
+                android:text="@string/dummy_cost"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/base_color_green" />
+            
+            <TextView
+                android:id="@+id/doc_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/doc_image"
+                android:layout_toRightOf="@+id/doc_image"
+                android:text="@string/doc_distance"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/base_color_blue_light" />
+
+            <TextView
+                android:id="@+id/doc_distance_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/doc_distance"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/doc_distance"
+                android:text="@string/dummy_distance"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/doc_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doc_address"
+                android:layout_toRightOf="@+id/doc_image"
+                android:text="@string/dummy_phone"
+              
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/base_color_green" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/call"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_btn"
+                android:drawableLeft="@android:drawable/sym_call_outgoing"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:onClick="callDoctor"
+                android:paddingLeft="3dp"
+                android:text="@string/call"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/show_directions"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/custom_btn"
+                android:drawableLeft="@android:drawable/ic_menu_directions"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:onClick="showDirectons"
+                android:paddingLeft="3dp"
+                android:text="@string/directions"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_health_online"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_health_online"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/my_health_online_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_long"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/specialities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/specialities"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/specialities_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/affiliations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/affiliations"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/affiliations_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_short"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/hospital_affiliations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hospital_affiliations"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hospital_affiliations_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_short"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/education"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/education_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_short"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/professional_interests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/professional_interests"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/professional_interests_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_short"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/additional_languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/additional_languages"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/additional_languages_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_short"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/community_activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/community_activities"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/community_activities_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_short"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+
+            <TextView
+                android:id="@+id/philosophy_care"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/philosophy_care"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/philosophy_care_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/dummy_lorem_ipsum_long"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/base_color_green" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

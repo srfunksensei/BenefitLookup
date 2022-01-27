@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/shape_doctor_info_back"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/docDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/closeButton"
+        android:background="@color/base_color_green"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="@string/empty"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_alignTop="@+id/docDialogTitle"
+        android:layout_alignBottom="@+id/docDialogTitle"
+        android:contentDescription="@string/close"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="@color/base_color_green" />
+
+    <TextView
+        android:id="@+id/docDialogInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/docDialogTitle"
+        android:layout_marginTop="3dp"
+        android:padding="3dp"
+        android:text="@string/empty"
+        android:textColor="@color/base_color_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/docDialogInfo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/docDialogDetails"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_weight="1"
+            android:background="@drawable/custom_btn"
+            android:paddingLeft="3dp"
+            android:text="@string/details"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/docDialogDirections"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.89"
+            android:background="@drawable/custom_btn"
+            android:text="@string/directions"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

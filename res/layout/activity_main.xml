@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <rs.co.pamet.android.benefit_lookup.controls.CoverFlow
+        xmlns:coverflow="http://schemas.android.com/apk/res/rs.co.pamet.android.benefit_lookup"
+        android:id="@+id/coverflowReflect"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0.8"
+        coverflow:imageHeight="150dp"
+        coverflow:imageWidth="150dp"
+        coverflow:imageReflectionRatio="0.2"
+        coverflow:reflectionGap="2dp"
+        coverflow:withReflection="true" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/base_color_blue" >
+
+    </TextView>
+
+</LinearLayout>

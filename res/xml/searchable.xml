@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:label="@string/app_name" android:hint="@string/search_hint"
+    android:searchSettingsDescription="@string/serchable_description"
+        android:searchSuggestAuthority="rs.co.pamet.android.benefit_lookup.content_providers.SearchContentProvider"
+        android:searchSuggestIntentAction="android.intent.action.VIEW"
+        android:searchSuggestIntentData="content://rs.co.pamet.android.benefit_lookup.content_providers.SearchContentProvider/benefits"
+        android:searchSuggestSelection=" ?"
+        android:searchSuggestThreshold="1"
+        android:inputType="textFilter|textMultiLine"
+        >
+<!-- 	android:searchSettingsDescription="suggests urls" -->
+<!-- 	android:includeInGlobalSearch="true" -->
+<!-- 	android:searchSuggestAuthority="rs.co.pamet.android.benefit_lookup.content_providers.searchcontentprovider" -->
+<!-- 	android:searchSuggestIntentAction="android.intent.action.VIEW" -->
+<!-- 	android:searchSuggestSelection=" ?" -->
+<!-- 	android:searchSuggestThreshold="1" -->
+    
+    
+
+</searchable>

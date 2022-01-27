@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android1:id="@+id/scrollDocDialog"
+    android1:layout_width="wrap_content"
+    android1:layout_height="wrap_content"
+    android1:layout_gravity="center_horizontal"
+    android1:layout_margin="10dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_doctor_info_back"
+        android:padding="5dp"
+        android1:gravity="top" >
+
+        <TextView
+            android:id="@+id/docDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/closeButton"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/dummy_name"
+            android:textColor="@color/white"
+            android1:background="@color/base_color_green"
+            android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/docDialogTitle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/docDialogTitle"
+            android:contentDescription="@string/close"
+            android:gravity="center|right"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android1:background="@color/base_color_green" />
+
+        <TextView
+            android:id="@+id/docDialogInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docDialogTitle"
+            android1:layout_marginTop="3dp"
+            android:padding="3dp"
+            android:text="@string/empty"
+            android:textColor="@color/base_color_blue" />
+
+        <TextView
+            android:id="@+id/docDialogInstrutions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docDialogInfo"
+            android1:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="@string/instructions"
+            android:textColor="@color/white"
+            android1:background="@color/base_color_green"
+            android1:paddingBottom="3dp"
+            android1:paddingTop="3dp"
+            android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/docDirectionsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docDialogInstrutions"
+            android1:layout_marginTop="3dp"
+            android:padding="3dp"
+            android:text="@string/empty"
+            android:textColor="@color/base_color_blue" />
+    </RelativeLayout>
+
+</ScrollView>
